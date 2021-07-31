@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import { Switch, Route } from 'react-router-dom';
 import './App.css';
+import styled from 'styled-components'
+import StartPage from './components/StartPage'
+
+const Title = styled.h1`
+  text-align: center;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Title>Welcome to Electric Horizon Games!</Title>
+      <Switch>
+        <Route exact path='/'>
+          <StartPage />
+        </Route>
+      </Switch>
+    </>
+  )
 }
 
 export default App;
