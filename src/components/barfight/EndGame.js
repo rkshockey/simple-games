@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 function EndGame (props){
     const { setPHP, setEHP, countZero, text } = props;

@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import EndGame from './EndGame'
 
 function EndRound (props){
