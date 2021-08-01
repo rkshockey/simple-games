@@ -1,7 +1,15 @@
-.App {
+h1, h2 {
   text-align: center;
 }
 
 .container {
   margin: 5%
+}
+
+.btn-container {
+  margin: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
