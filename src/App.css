@@ -13,3 +13,34 @@ h1, h2 {
   justify-content: space-around;
   align-items: center;
 }
+
+.opener {
+  background-size: contain;
+  height: 20vh;
+  margin: 1% 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.opener p{
+  width: 30%;
+  background: black;
+  color:aliceblue;
+  text-align: center;
+  margin: 0;
+}
+
+.opener p a {
+  color: lightblue
+}
+
+.home{
+  background-image: url('./assets/homeBackground.jpg');
+}
+
+.bar{
+  background-image: url('./assets/barBackground.jpg');
+}
+
+
