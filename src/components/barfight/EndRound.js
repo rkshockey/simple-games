@@ -13,18 +13,11 @@ function EndRound (props){
         return <EndGame setPHP={setPHP} setEHP={setEHP} countZero={countZero} text='You win!' />
     }else{
         return (
-            <StyledDiv>
-                <StyledBtn onClick={countZero}>Another Round!</StyledBtn>
-            </StyledDiv>
+            <div className='continue'>
+                <button className='continue' onClick={countZero}>Another Round!</button>
+            </div>
         )
     }
 }
-
-const StyledDiv = styled.div`
-
-`
-const StyledBtn = styled.button`
-
-`
 
 export default EndRound

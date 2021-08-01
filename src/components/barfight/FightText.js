@@ -10,8 +10,6 @@ function FightText (props) {
     function round(){
         if (move.name === 'dodge' || move.name === 'defend'){
             return null
-        }else if (Math.random() + altMove.dodge > move.toHit){
-            return `${altPro} dodged!`
         }else if (move.heal !== 0){
             const heal = Math.floor(move.heal * (1 + Math.random()));
             if (altHP + heal > 200){
@@ -20,6 +18,8 @@ function FightText (props) {
                 setAltHP(altHP + heal);
             }
             return `${pro} healed ${heal} points of damage!`
+        }else if (Math.random() + altMove.dodge > move.toHit){
+            return `${altPro} dodged!`
         }else{
             const damage = Math.floor(((2 + Math.random()) * move.damage) - ((1 + Math.random()) * altMove.defense));
             if (hp - damage < 0){
@@ -32,21 +32,11 @@ function FightText (props) {
     }
 
     return (
-        <>
-        <StyledDiv>
+        <div className='continue'>
             <p>{pro} used {move.name}! {result}</p>
-        </StyledDiv>
-        <Next onClick={countUp}>Next</Next>
-        </>
+            <button className='continue' onClick={countUp}>Next</button>
+        </div>
     )
 }
-
-const StyledDiv = styled.div`
-
-`
-
-const Next = styled.button`
-
-`
 
 export default FightText

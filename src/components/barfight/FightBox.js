@@ -26,6 +26,8 @@ function FightBox (props) {
         return <MoveBtns moveList={moveList} countUp={countUp} setMoves={setMoves} />
     }else if (counter === 1){
         return <FightText pro='You' altPro='Enemy' move={pMove} altMove={eMove} hp={eHP} setHP={setEHP} altHP={pHP} setAltHP={setPHP} countUp={countUp} />
+    }else if (counter === 2 && eHP === 0){
+        return <EndRound pHP={pHP} eHP={eHP} setPHP={setPHP} setEHP={setEHP} countZero={countZero} />
     }else if (counter === 2){
         return <FightText pro='Enemy' altPro='You' move={eMove} altMove={pMove} hp={pHP} setHP={setPHP} altHP={eHP} setAltHP={setEHP} countUp={countUp} />
     }else if (counter === 3){

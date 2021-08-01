@@ -11,9 +11,9 @@ function EndGame (props){
     }
 
     return (
-        <div className='container'>
+        <div className='continue'>
             <p>{text}</p>
-            <button onClick={click}>Play Again?</button>
+            <button className='continue' onClick={click}>Play Again?</button>
         </div>
     )
 }
