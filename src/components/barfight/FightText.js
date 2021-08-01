@@ -4,7 +4,7 @@ function FightText (props) {
     const [result, setResult] = useState(null)
     const { pro, altPro, move, altMove, hp, setHP, altHP, setAltHP, countUp } = props
 
-    useEffect(() => setResult(round()),[pro])
+    useEffect(() => setResult(round()), [pro])
 
     function round(){
         if (move.name === 'dodge' || move.name === 'defend'){
